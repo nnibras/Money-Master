@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Money Master</title>
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body class="bg-emerald-100">
+    <header>
+      <div class="text-center w-full sm:w-1/2 mx-7 sm:mx-auto">
+        <h1 class="text-4xl sm:text-5xl">
+          Money Master <span class="text-emerald-800">$$$</span>
+        </h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-0">
+        <div class="mx-10 sm:mx-auto my-10 hidden sm:block">
+          <img class="h-full w-full" src="money.jpg" alt="" />
+        </div>
+        <div
+          class="mx-10 pr-5 mt-6 mb-1 sm:mx-auto sm:pr-0 sm:mt-10 sm:pb-0 pb-14 bg-emerald-300 rounded-lg py-14 sm:w-3/4 mx-auto"
+        >
+          <h1 class="text-3xl text-center mb-3">Income</h1>
+          <div class="flex justify-center">
+            <h3 class="mx-8">Income:</h3>
+            <input
+              id="income"
+              class="bg-emerald-600 rounded-lg text-white pl-3"
+              type="number"
+            />
+          </div>
+
+          <h1 class="text-3xl text-center mb-3 mt-7">Expenses</h1>
+          <div class="flex justify-center mb-3">
+            <h3 class="mx-10">Food:</h3>
+            <input
+              id="food"
+              class="bg-emerald-600 rounded-lg text-white pl-3"
+              type="number"
+            />
+          </div>
+          <div class="flex justify-center mb-3">
+            <h3 class="mx-10">Rent:</h3>
+            <input
+              id="rent"
+              class="bg-emerald-600 rounded-lg text-white pl-3"
+              type="number"
+            />
+          </div>
+          <div class="flex justify-center">
+            <h3 class="mx-6">Life-Style:</h3>
+            <input
+              id="lifeStyle"
+              class="bg-emerald-600 rounded-lg text-white pl-3"
+              type="number"
+            />
+          </div>
+          <div class="flex justify-center">
+            <button
+              id="calculate-btn"
+              class="bg-emerald-600 px-8 py-3 rounded-lg mt-5 text-white"
+            >
+              Calculate
+            </button>
+          </div>
+          <div>
+            <div class="flex justify-center mt-4 mb-2">
+              <h1>
+                Total Expense:
+                <span
+                  id="totalExpense"
+                  class="text-emerald-900 font-bold text-2xl"
+                ></span>
+              </h1>
+            </div>
+            <div class="flex justify-center mb-4">
+              <h1>
+                Balance:
+                <span
+                  id="balance"
+                  class="text-emerald-900 font-bold text-2xl"
+                ></span>
+              </h1>
+              <h3 class="text-emerald-900"></h3>
+            </div>
+          </div>
+          <div class="flex justify-center my-3">
+            <h3 class="mx-6">Save:</h3>
+            <input
+              id="save"
+              class="bg-emerald-600 rounded-lg text-white pl-3 h-9"
+              type="number"
+              max="100"
+              min="0"
+            />
+            <h2 class="mr-6 ml-2">%</h2>
+            <button
+              id="save-btn"
+              class="bg-emerald-600 px-10 rounded-lg text-white h-9"
+            >
+              Save
+            </button>
+          </div>
+          <div>
+            <div class="flex justify-center mt-4 mb-2">
+              <h1>
+                Saving Amount:
+                <span
+                  id="savingAmount"
+                  class="text-emerald-900 font-bold text-2xl"
+                ></span>
+              </h1>
+              <h3 class="text-emerald-900"></h3>
+            </div>
+            <div class="flex justify-center mb-4">
+              <h1>
+                Remaining Balance:
+                <span
+                  id="remainingBalance"
+                  class="text-emerald-900 font-bold text-2xl"
+                ></span>
+              </h1>
+              <h3 class="text-emerald-900"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="utility.js"></script>
+    <script src="calculate.js"></script>
+    <script src="save.js"></script>
+  </body>
+</html>
